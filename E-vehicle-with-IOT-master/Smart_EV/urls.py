@@ -16,13 +16,15 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
+from Smart_EV_App.views import home
 from django.conf import settings
 from django.conf.urls.static import static
 from Smart_EV_App.views import *
 
 urlpatterns = [
-
+    
     path('admin/', admin.site.urls),
+    path('home',home,name='home'),
     path('api/save_user/', save_user, name="save_user" ),
     path('api/user_login/', user_login, name="user_login" ),
     path('api/get_stations/', get_stations, name="get_stations" ),
