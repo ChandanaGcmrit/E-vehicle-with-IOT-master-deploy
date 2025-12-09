@@ -21,7 +21,7 @@ from django.conf.urls.static import static
 from Smart_EV_App.views import *
 
 urlpatterns = [
-    path(",home),
+    path('home',home,name=home),
     path('admin/', admin.site.urls),
     path('api/save_user/', save_user, name="save_user" ),
     path('api/user_login/', user_login, name="user_login" ),
