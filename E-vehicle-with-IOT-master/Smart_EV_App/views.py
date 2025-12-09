@@ -20,7 +20,7 @@ ist_now = utc_now.astimezone(timezone.get_fixed_timezone(330))  # UTC+5:30 for I
 # Format the datetime as a string if needed
 formatted_time = ist_now.strftime('%Y-%m-%d %H:%M:%S')
 def home(request):
-    return HttpResponse(EV charging station)
+    return HttpResponse("EV charging station")
 
 def save_user(request):
     if request.method == 'POST':
