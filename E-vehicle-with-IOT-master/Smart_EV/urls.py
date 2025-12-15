@@ -24,7 +24,7 @@ from Smart_EV_App.views import *
 urlpatterns = [
     
     path('admin/', admin.site.urls),
-    path('home',home,name='home'),
+    path('', home, name='home'),
     path('api/save_user/', save_user, name="save_user" ),
     path('api/user_login/', user_login, name="user_login" ),
     path('api/get_stations/', get_stations, name="get_stations" ),
