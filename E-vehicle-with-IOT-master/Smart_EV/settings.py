@@ -77,15 +77,12 @@ WSGI_APPLICATION = 'Smart_EV.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+import dj_database_url
+
 DATABASES = {
-	'default': {
-		'ENGINE': 'django.db.backends.mysql',
-		'NAME': 'smart_ev_db',
-		'USER': 'root',
-		'PASSWORD': 'mysql',
-		'HOST':'localhost',
-		'PORT':'3306',
-	}
+    'default': dj_database_url.config(
+        default='sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
+    )
 }
 
 
